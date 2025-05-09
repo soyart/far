@@ -26,7 +26,7 @@ func FindAndReplace(root, old, new string) error {
 
 		// Avoid unneccessary writes
 		if bytes.Equal(original, replaced) {
-			slog.Info("skip", slog.String("path", path))
+			slog.Debug("skip", slog.String("path", path))
 			return nil
 		}
 
